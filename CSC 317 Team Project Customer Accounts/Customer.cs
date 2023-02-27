@@ -19,8 +19,24 @@ namespace CSC_317_Team_Project_Customer_Accounts
 
         public override string ToString()
         {
-            //output the customer as a string.
-            return base.ToString();
+            StringBuilder result = new StringBuilder();
+
+            /* Desired Output
+              
+            Name: <name>
+            --> Address
+            -->City, State Zip
+            -->Phone Number
+            -->$Account Balance
+            -->     Last payment made on xx/xx/xxxx
+            */
+            result.Append($"Name: {Name}\n");
+            result.Append($"--> {City}, {State} {Zip}\n");
+            result.Append($"--> {Phone}\n");
+            result.Append($"--> Balance: &{AccountBalance}\n");
+            result.Append($"--> Last payment made on {LastPaymentDate.ToShortDateString()}\n ");
+
+            return result.ToString();
         }
 
     }
@@ -29,21 +45,25 @@ namespace CSC_317_Team_Project_Customer_Accounts
     { 
         private List<Customer> customerList;
 
+        //Jerry
         void FindCustomer()
         {
             //blank
         }
 
+        //Jerry
         void AddCustomer()
         {
 
         }
-    
+        
+        //William
         void RemoveCusomter()
         {
 
         }
         
+        //William
         void EditCustomer()
         {
 
