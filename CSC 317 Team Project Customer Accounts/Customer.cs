@@ -31,22 +31,24 @@ namespace CSC_317_Team_Project_Customer_Accounts
 
         void FindCustomer()
         {
-            //blank
+            // ...
         }
 
         void AddCustomer()
         {
-
+            // ...
         }
-    
-        void RemoveCusomter()
-        {
 
+        // William
+        void RemoveCusomter(Customer c)
+        {
+            customerList.Remove(c);
         }
-        
-        void EditCustomer()
-        {
 
+        // William
+        void EditCustomerName(Customer c, string name)
+        {
+            c.Name = name;
         }
     }
 
