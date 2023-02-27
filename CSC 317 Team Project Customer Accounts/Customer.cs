@@ -17,6 +17,20 @@ namespace CSC_317_Team_Project_Customer_Accounts
         public decimal AccountBalance { get; set; }
         public DateTime LastPaymentDate { get; set; }
 
+        
+        public Customer(string name, string address, string city, string state, string zip, string phone, decimal accountBalance)
+        {
+            Name = name;
+            Address = address;
+            City = city;
+            State = state;
+            Zip = zip;
+            Phone = phone;
+            AccountBalance = accountBalance;
+            LastPaymentDate = DateTime.Now;
+
+        }
+
         public override string ToString()
         {
             //output the customer as a string.
@@ -29,14 +43,26 @@ namespace CSC_317_Team_Project_Customer_Accounts
     { 
         private List<Customer> customerList;
 
-        void FindCustomer()
+        void FindCustomer(string name)
         {
-            //blank
+            for(int i = 0; i < customerList.Count; i++)
+            {
+                if (customerList[i].Name == name)
+                { 
+                    Console.WriteLine("Customer found! Printing data: ");
+                    Console.WriteLine(customerList[i].ToString());
+                }
+                else
+                {
+                    Console.WriteLine("Customer not found!");
+                }
+            }
+               
         }
 
-        void AddCustomer()
+        void AddCustomer(Customer dude)
         {
-
+            customerList.Add(dude);
         }
     
         void RemoveCusomter()
