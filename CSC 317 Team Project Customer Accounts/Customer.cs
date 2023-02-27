@@ -48,25 +48,25 @@ namespace CSC_317_Team_Project_Customer_Accounts
         //Jerry
         void FindCustomer()
         {
-            //blank
+            // ...
         }
 
         //Jerry
         void AddCustomer()
         {
-
+            // ...
         }
-        
-        //William
-        void RemoveCusomter()
-        {
 
+        //William
+        void RemoveCustomer(Customer c, string name)
+        {
+            customerList.Remove(c);
         }
-        
-        //William
-        void EditCustomer()
-        {
 
+        // William
+        void EditCustomerName(Customer c, string name)
+        {
+            c.Name = name;
         }
     }
 
