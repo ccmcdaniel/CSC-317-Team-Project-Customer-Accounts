@@ -57,19 +57,8 @@ namespace CSC_317_Team_Project_Customer_Accounts
             // ...
         }
 
-        void RemoveCusomter(Customer c)
-        {
-
-        }
-
         //William
-        void RemoveCusomter()
-        {
-
-        }
-        
-        //William
-        void EditCustomer(Customer c, string name)
+        void RemoveCustomer(Customer c, string name)
         {
             customerList.Remove(c);
         }
