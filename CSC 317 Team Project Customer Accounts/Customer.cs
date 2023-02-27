@@ -58,9 +58,13 @@ namespace CSC_317_Team_Project_Customer_Accounts
         }
 
         //William
-        void RemoveCustomer(Customer c, string name)
+        void RemoveCustomer(string name)
         {
-            customerList.Remove(c);
+            foreach(Customer c in customerList)
+            {
+                if (c.Name == name)
+                    customerList.Remove(c);
+            }
         }
 
         // William
