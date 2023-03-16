@@ -1,13 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Text;
 
-namespace CSC_317_Team_Project_Customer_Accounts
-{
-    internal class Customer
-    {
+namespace CSC_317_Team_Project_Customer_Accounts {
+    internal class Customer {
         public string Name { get; set; }
         public string Address { get; set; }
         public string City { get; set; }
@@ -17,8 +11,7 @@ namespace CSC_317_Team_Project_Customer_Accounts
         public decimal AccountBalance { get; set; }
         public DateTime LastPaymentDate { get; set; }
 
-        public override string ToString()
-        {
+        public override string ToString() {
             StringBuilder result = new StringBuilder();
 
             /* Desired Output

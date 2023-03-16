@@ -1,15 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace CSC_317_Team_Project_Customer_Accounts
-{
-    internal class Program
-    {
-        static void Main(string[] args)
-        {
+namespace CSC_317_Team_Project_Customer_Accounts {
+    class Program {
+        public static void Main() {
+            //example of Customer object
             Customer customer = new Customer();
 
             customer.Name = "Billy Bob";
@@ -23,6 +15,18 @@ namespace CSC_317_Team_Project_Customer_Accounts
 
             Console.WriteLine(customer);
 
+            //Example of ParkedCars object
+            ParkedCars lot = new ParkedCars();
+            lot.addCar("a","b","c", 11);
+            lot.addCar("d","e","f", 12);
+            lot.addCar("g","h","i", 13);
+            lot.printCars();
+
+            lot.removeCar(1);
+            lot.printCars();
+            
+            lot.setCar(0, "j","k","l", 14);
+            lot.printCars();
         }
     }
 }
